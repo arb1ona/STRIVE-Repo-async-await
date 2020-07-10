@@ -36,10 +36,11 @@ function saveStudentAndRedirect(path) {
   return async (req, res) => {
     let student = req.student
     student.title = req.body.title
-    student.profession = req.body.profession
+    student.surname = req.body.surname
     student.email = req.body.email
+    student.profession = req.body.profession
+    student.markdown = req.body.markdown
     student.state = req.body.state
-    // student.markdown = req.body.markdown
     try {
       student = await student.save()
       res.redirect(`/students/${student.slug}`)
