@@ -1,38 +1,45 @@
-<div class="form-row">
+<div class="row">
   <div class="form-group col-md-6">
     <label for="title">Name</label>
     <input required value="<%= student.title %>" type="text" name="title" id="title" class="form-control">
   </div>
   <div class="form-group col-md-6">
-    <label for="profession">Profession</label>
-    <input required value="<%= student.profession %>" type="text" name="profession" id="profession"
-      class="form-control">
-    <!-- <textarea name="profession" id="profession" class="form-control"><%= student.profession %></textarea> -->
+    <label for="surname">Surnname</label>
+    <input required value="<%= student.surname %>" type="text" name="surname" id="surname" class="form-control">
   </div>
 </div>
-<div class="form-row">
+<div class="row">
   <div class="form-group col-md-6">
-    <label for="email">E-mail</label>
+    <label for="email">Email</label>
     <input required value="<%= student.email %>" type="text" name="email" id="email" class="form-control">
   </div>
   <div class="form-group col-md-6">
-    <!-- <label for="state">State</label>
-    <input required value="<%= student.state %>" type="text" name="state" id="state" class="form-control"> -->
+    <label for="profession">Profession</label>
+    <input required value="<%= student.profession %>" type="text" name="profession" id="profession"
+      class="form-control">
+  </div>
+</div>
+<div class="row">
+  <div class="form-group col-md-6">
+    <label for="markdown">Markdown</label>
+    <textarea required name="markdown" id="markdown" class="form-control"><%= student.markdown %></textarea>
+  </div>
+  <div class="form-group col-md-6">
     <div class="form-group col-md-6">
       <label for="inputState">State</label>
       <select id="inputState" class="form-control" name="state">
         <option selected>Choose...</option>
-        <option value=" AF">Afghanistan</option>
-        <option value="AX">Åland Islands</option>
-        <option value="AL">Albania</option>
-        <option value="DZ">Algeria</option>
-        <option value="AS">American Samoa</option>
-        <option value="AD">Andorra</option>
-        <option value="AO">Angola</option>
-        <option value="AI">Anguilla</option>
-        <option value="AQ">Antarctica</option>
-        <option value="AG">Antigua and Barbuda</option>
-        <option value="AR">Argentina</option>
+        <option>Afghanistan</option>
+        <option>Åland Islands</option>
+        <option>Albania</option>
+        <option>Algeria</option>
+        <option>American Samoa</option>
+        <option>Andorra</option>
+        <option>Angola</option>
+        <option>Anguilla</option>
+        <option>Antarctica</option>
+        <option>Antigua and Barbuda</option>
+        <option>Argentina</option>
         <option value="AM">Armenia</option>
         <option value="AW">Aruba</option>
         <option value="AU">Australia</option>
@@ -71,13 +78,30 @@
         <option value="CX">Christmas Island</option>
         <option value="CC">Cocos (Keeling) Islands</option>
         <option value="CO">Colombia</option>
-        <option value="HR">Croatia</option>
+        <option value="KM">Comoros</option>
+        <option value="CG">Congo</option>
+        <option value="CD">Congo, the Democratic Republic of the</option>
+        <option value="CK">Cook Islands</option>
+        <option value="CR">Costa Rica</option>
+        <option value="CI">Côte d'Ivoire</option>
+        <option>Croatia</option>
         <option value="CU">Cuba</option>
         <option value="CW">Curaçao</option>
         <option value="CY">Cyprus</option>
         <option value="CZ">Czech Republic</option>
         <option value="DK">Denmark</option>
+        <option value="DJ">Djibouti</option>
+        <option value="DM">Dominica</option>
+        <option value="DO">Dominican Republic</option>
+        <option value="EC">Ecuador</option>
+        <option value="EG">Egypt</option>
+        <option value="SV">El Salvador</option>
+        <option value="GQ">Equatorial Guinea</option>
+        <option value="ER">Eritrea</option>
         <option value="EE">Estonia</option>
+        <option value="ET">Ethiopia</option>
+        <option value="FK">Falkland Islands (Malvinas)</option>
+        <option value="FO">Faroe Islands</option>
         <option value="FJ">Fiji</option>
         <option value="FI">Finland</option>
         <option value="FR">France</option>
@@ -114,7 +138,7 @@
         <option value="IE">Ireland</option>
         <option value="IM">Isle of Man</option>
         <option value="IL">Israel</option>
-        <option value="IT">Italy</option>
+        <option>Italy</option>
         <option value="JM">Jamaica</option>
         <option value="JP">Japan</option>
         <option value="JE">Jersey</option>
@@ -213,7 +237,7 @@
         <option value="ZA">South Africa</option>
         <option value="GS">South Georgia and the South Sandwich Islands</option>
         <option value="SS">South Sudan</option>
-        <option value="ES">Spain</option>
+        <option>Spain</option>
         <option value="LK">Sri Lanka</option>
         <option value="SD">Sudan</option>
         <option value="SR">Suriname</option>
@@ -239,7 +263,7 @@
         <option value="UG">Uganda</option>
         <option value="UA">Ukraine</option>
         <option value="AE">United Arab Emirates</option>
-        <option value="GB">United Kingdom</option>
+        <option>United Kingdom</option>
         <option value="US">United States</option>
         <option value="UM">United States Minor Outlying Islands</option>
         <option value="UY">Uruguay</option>
@@ -258,13 +282,6 @@
     </div>
   </div>
 </div>
-<!-- <div class="form-row">
-  <div class="form-group">
-    <label for="markdown">Markdown</label>
-    <textarea required name="markdown" id="markdown" class="form-control"><%= student.markdown %></textarea>
-  </div>
-</div> -->
-
-
 <a href="/" class="btn btn-secondary">Cancel</a>
 <button type="submit" class="btn btn-primary">Save</button>
+</div>
