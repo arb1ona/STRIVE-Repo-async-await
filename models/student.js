@@ -10,19 +10,25 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  profession: {
+  surname: {
     type: String
   },
   email: {
-    type: String
+    type: String,
+    required: true
+  },
+  profession: {
+    type: String,
+    required: true
   },
   state: {
-    type: String
+    type: String,
+    required: true
   },
-  // markdown: {
-  //   type: String,
-  //   required: true
-  // },
+  markdown: {
+    type: String,
+    required: true
+  },
   createdAt: {
     type: Date,
     default: Date.now
@@ -43,17 +49,11 @@ studentSchema.pre('validate', function (next) {
     this.slug = slugify(this.title, { lower: true, strict: true })
   }
 
-  // if (this.markdown) {
-  //   this.sanitizedHtml = dompurify.sanitize(marked(this.markdown))
-  // }
+  if (this.markdown) {
+    this.sanitizedHtml = dompurify.sanitize(marked(this.markdown))
+  }
 
   next()
 })
-
-function validateEmail(email) {
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase())
-
-}
 
 module.exports = mongoose.model('Student', studentSchema)
