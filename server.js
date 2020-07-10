@@ -5,7 +5,7 @@ const studentRouter = require('./routes/students')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://localhost/registry', {
+mongoose.connect('mongodb://localhost:27017/students-repo', {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 
